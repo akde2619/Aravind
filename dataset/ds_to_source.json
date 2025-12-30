@@ -1,0 +1,22 @@
+{
+	"name": "ds_to_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lstosource",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "akde2619/Aravind/refs/heads/main/Adventure-Works-Data-Engineering-Project-main/Adventure-Works-Data-Engineering-Project-main/Data/AdventureWorks_Products.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

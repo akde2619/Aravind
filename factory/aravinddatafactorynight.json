@@ -1,0 +1,9 @@
+{
+	"name": "aravinddatafactorynight",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f3917f4b-a2ce-4cc5-91ca-29e7ea767f97",
+		"tenantId": "fa48b003-d8c6-462b-9f38-cee05cdc4b5a"
+	}
+}

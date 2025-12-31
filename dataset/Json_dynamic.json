@@ -1,0 +1,19 @@
+{
+	"name": "Json_dynamic",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lstosink_raw",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "gitnew_dynamic.json",
+				"fileSystem": "parameter"
+			}
+		},
+		"schema": {}
+	}
+}

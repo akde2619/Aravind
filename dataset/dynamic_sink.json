@@ -1,0 +1,38 @@
+{
+	"name": "dynamic_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lstosink_raw",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_folder": {
+				"type": "String"
+			},
+			"p_filename": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().p_filename",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().p_folder",
+					"type": "Expression"
+				},
+				"fileSystem": "bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

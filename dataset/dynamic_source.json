@@ -1,0 +1,30 @@
+{
+	"name": "dynamic_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lstosource",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_container_url": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().p_container_url",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
